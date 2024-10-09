@@ -21,8 +21,8 @@ This repository contains a Bash script for installing Jenkins on an Ubuntu serve
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/nulltogeek/ci-using-jenkins-nexus-sonarqube-slack.git
+   cd ci-using-jenkins-nexus-sonarqube-slack
    ```
 
 2. **Run Vagrant:**
