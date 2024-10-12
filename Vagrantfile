@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
         vb.memory = "2048"
         vb.cpus = 2
       end
-      jenkins.vm.provision "shell", path: "jenkins-installation.sh"
+      jenkins.vm.provision "shell", path: "/scripts/jenkins-installation.sh"
     end
   
     # SonarQube VM Configuration
@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
         vb.memory = "2048"
         vb.cpus = 2
       end
-      sonarqube.vm.provision "shell", path: "sonarqube-installation.sh"
+      sonarqube.vm.provision "shell", path: "/scripts/sonarqube-installation.sh"
     end
   
     # Nexus VM Configuration
@@ -33,7 +33,7 @@ Vagrant.configure("2") do |config|
         vb.memory = "2048"
         vb.cpus = 2
       end
-      nexus.vm.provision "shell", path: "nexus-installation.sh"
+      nexus.vm.provision "shell", path: "/scripts/nexus-installation.sh"
     end
   
   end
