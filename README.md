@@ -152,3 +152,42 @@ The default credentials for SonarQube are:
 
 This setup allows for quick deployment of Jenkins, Nexus, and SonarQube servers on an Ubuntu VM. Modify the Bash scripts or Vagrant configuration as needed for your specific requirements.
 
+## Configuring Nexus Repositories
+
+After installing Nexus, you need to configure the following repositories:
+
+### 1. Maven (hosted) for uploading tested artifacts
+
+1. **Login to Nexus**: Navigate to `http://10.0.0.10:8081` and login with the admin credentials.
+2. **Create a new repository**:
+  - Go to **Settings** > **Repositories** > **Create repository**.
+  - Select **maven2 (hosted)**.
+  - Configure the repository with the following settings:
+    - **Name**: `maven-releases`
+    - **Version policy**: `Release`
+    - **Storage**: Default settings
+  - Click **Create repository**.
+
+### 2. Maven (proxy) for storing dependencies
+
+1. **Create a new repository**:
+  - Go to **Settings** > **Repositories** > **Create repository**.
+  - Select **maven2 (proxy)**.
+  - Configure the repository with the following settings:
+    - **Name**: `maven-central`
+    - **Remote storage**: `https://repo1.maven.org/maven2/`
+    - **Storage**: Default settings
+  - Click **Create repository**.
+
+### 3. Maven (hosted) for artifact snapshots
+
+1. **Create a new repository**:
+  - Go to **Settings** > **Repositories** > **Create repository**.
+  - Select **maven2 (hosted)**.
+  - Configure the repository with the following settings:
+    - **Name**: `maven-snapshots`
+    - **Version policy**: `Snapshot`
+    - **Storage**: Default settings
+  - Click **Create repository**.
+
+These repositories will help manage your Maven artifacts and dependencies efficiently.
