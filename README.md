@@ -51,6 +51,13 @@ The `jenkins-installation.sh`, `nexus-installation.sh`, and `sonar-installation.
 5. **Installs Jenkins.**
 6. **Starts the Jenkins service and enables it to start on boot.**
 7. **Checks the status of the Jenkins service.**
+8. **Installs the following Jenkins plugins**:
+   - Maven Integration
+   - GitHub Integration
+   - Nexus Artifact Uploader
+   - SonarQube Scanner
+   - Slack Notification
+   - Build Timestamp
 
 ### Nexus Installation
 
