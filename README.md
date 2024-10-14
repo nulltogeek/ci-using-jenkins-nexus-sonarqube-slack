@@ -1,1 +1,0 @@
-# ci-using-jenkins-nexus-sonarqube-slack
